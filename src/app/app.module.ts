@@ -22,6 +22,20 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatTableModule} from '@angular/material/table'
+import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { FirebaseModule } from './Firebase.module';
+import { LoginComponent } from './login/login.component';
+import { MatCardModule } from '@angular/material/card';
+import { BrowserModule } from '@angular/platform-browser';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -34,11 +48,30 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatTableModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule,
+    HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatMenuModule,
+    MatToolbarModule,
+    FirebaseModule,
+    MatCardModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    LoginComponent,
 
   ],
   providers: [],
