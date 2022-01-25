@@ -1,0 +1,24 @@
+{
+    "members":[
+        {
+      "id":"4578",
+      "cin":"1254887",
+      "name": "imene lahyani",
+      "createdDate":"2020-10-20",
+      "cv" : "https://www.cdc.gov/polio/stop/pdf/stop-french-cv-template.pdf?fbclid=IwAR0oTkT3sn0rzr7_KHHG_OjeXwEvLZWaE8rUdLB0IcSUFQ4WlwHY5JSeuCM",
+     "type": "teacher",
+      "actionedit":"",
+      "actiondelete":""
+        },
+        {
+      "id":"4578",
+      "cin":"1254989",
+      "name": "ali",
+      "createdDate":"2020-10-20",
+      "cv" : "https://www.cdc.gov/polio/stop/pdf/stop-french-cv-template.pdf?fbclid=IwAR0oTkT3sn0rzr7_KHHG_OjeXwEvLZWaE8rUdLB0IcSUFQ4WlwHY5JSeuCM",
+      "type": "teacher",
+      "actionedit":"",
+      "actiondelete":""
+        }
+    ]
+}

@@ -36,9 +36,17 @@ import { LoginComponent } from './login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { MemberListComponent } from './member-list/member-list.component';
+import { MemberFormComponent } from './member-form/member-form.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {DataTablesModule} from 'angular-datatables';
+import { ConfirmDialogModule } from './confirm-dialog.module';
+import { ListEtudiantComponent } from './list-etudiant/list-etudiant.component';
+import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 
 @NgModule({
   imports: [
+    ConfirmDialogModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -46,6 +54,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    MatRadioModule,
+    DataTablesModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     }),
@@ -72,6 +82,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
+    MemberListComponent,
+    MemberFormComponent,
+    ListEtudiantComponent,
+    EtudiantFormComponent,
+  
 
   ],
   providers: [],

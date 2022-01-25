@@ -1,0 +1,81 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Gestion des membres</h4>
+                        <p class="card-category"><mat-radio-group aria-label="Select an option">
+                            <mat-radio-button value="1"  name="typeMb"
+                            (change)="changeTypeMb($event)" checked="true">Etudiant</mat-radio-button>
+                            <mat-radio-button value="2"  name="typeMb"
+                            (change)="changeTypeMb($event)">Ensegniant</mat-radio-button>
+                        </mat-radio-group></p>
+                        <button _ngcontent-gpf-c1="" class="btn btn-round btn-fill btn-warning" routerLink="/createMember"><i _ngcontent-gpf-c1="" class="fa fa-plus"></i>   Membre</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            
+                            <table datatable [dtOptions]="{
+                                pagingType: 'full_numbers',
+                                pageLength: 10,
+                                autoWidth: true,
+                                ajax: {url:'http://localhost:9000/MEMBRE-SERVICE/members/etudiants',dataSrc:''},
+                                
+                                columns: [
+                                {title: 'Select',data:''},
+                                  {title: 'Id', data:'id'},
+                                  {title: 'Cin', data: 'cin'},
+                                  {title: 'Nom', data: 'nom'},
+                                  {title: 'Prenom', data: 'prenom'},
+                                  {title: 'Date Naissence', data: 'date'},
+                                  {title: 'Cv', data: 'cv'},
+                                  {title: 'Email', data: 'email'},
+                                  {title: 'Date Inscription', data: 'dateInscription'},
+                                  
+                                  
+               
+
+                                ],
+                                buttons: ['copy', 'csv', 'pdf', 'print',
+                                {extend: 'selected',
+                                text: 'Delete'
+                                }],
+                                columnDefs: [
+                    {
+                      targets: 0,
+                      orderable: false,
+                      className: 'select-checkbox'
+                    },
+                    {
+                      targets: [2],
+                      visible: true
+                    }
+                  ]
+                        
+                                
+                                    
+                                  
+                            
+                              
+                            
+                                 
+                                
+                          
+                            
+                              }"
+                          
+                             class= "table" id="tab">
+                                
+                            </table>
+                            
+                          
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  

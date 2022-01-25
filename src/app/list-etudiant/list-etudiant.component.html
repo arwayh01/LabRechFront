@@ -1,0 +1,87 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Gestion des membres</h4>
+                     
+                        <button _ngcontent-gpf-c1="" class="btn btn-round btn-fill btn-warning" routerLink="/createEtudiant"><i _ngcontent-gpf-c1="" class="fa fa-plus"></i>  Etudiant</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            
+                            <table class="table table-striped table-sm row-border hover" id="datatableexample">
+                                <thead>
+                                  <tr>
+                                    <th>ID</th>
+                                    <th>Cin</th>
+                                    <th>Nom</th>
+                                    <th>Prenom</th>
+                                    <th>Date</th>
+                                    <th>CV</th>
+                                    <th>Email</th>
+                                    <th>Date Inscription</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                            
+                             
+                                 <tr *ngFor="let group of etudiantList">
+                                       <td>{{group.id}}</td>
+                                       <td>{{group.cin}}</td>
+                                       <td>{{group.nom}}</td>
+                                       <td>{{group.prenom}}</td>
+                                       <td>{{group.date}}</td>
+                                       <td>{{group.cv}}</td>
+                                       <td>{{group.email}}</td>
+                                       <td>{{group.dateInscription}}</td>
+                                       <td>
+                                           <div class="btn-group">
+                                               <button type="button"  routerLink="/etudiants/{{group.id}}/edit" class="btn btn-info btn-xs dt-view" style="margin-right:16px;">
+                                                <span class="glyphicon glyphicon-eye-open glyphicon-info-sign" aria-hidden="true"></span>
+                                                Edit
+                                            </button>
+                                               <button type="button" (click)="deleteEtudiant(group.id)"  class="btn btn-danger btn-xs dt-delete"><span class="glyphicon glyphicon-remove glyphicon-trash" aria-hidden="true"></span>Delete</button>
+                                            </div>
+                                    </td>
+                                   </tr>
+                                </tbody>
+                              </table>
+                            
+                          
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

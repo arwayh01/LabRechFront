@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
+import { MemberFormComponent } from './member-form/member-form.component';
+import { EtudiantFormComponent } from './etudiant-form/etudiant-form.component';
 
 const routes: Routes =[
   {
@@ -23,6 +25,23 @@ const routes: Routes =[
     pathMatch: 'full',
     component: LoginComponent,
   },
+  {
+    path: 'createMember',
+    pathMatch: 'full',
+    component: MemberFormComponent,
+  },
+  {
+    path: 'createEtudiant',
+    pathMatch: 'full',
+    component: EtudiantFormComponent,
+  },
+  {
+    path: 'etudiants/:id/edit',
+    pathMatch: 'full',
+    component: EtudiantFormComponent,
+  },
+  
+  
 ];
 
 @NgModule({
